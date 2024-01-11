@@ -39,7 +39,7 @@ const Header = () => {
     <div>
         <img src={logo} className='w-[80px] object-cover md:w-[115px]'  alt="logo" />
         {menu.map((item)=>(
-        <HeaderItem/>
+        <HeaderItem name={item.name} Icon= {item.icon}/>
         ))}
     </div>
   )
