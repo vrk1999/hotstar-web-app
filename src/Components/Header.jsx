@@ -36,11 +36,14 @@ const Header = () => {
         }
     ]
   return (
-    <div>
+    <div className='flex items-center gap-8'>
+        <div>
         <img src={logo} className='w-[80px] object-cover md:w-[115px]'  alt="logo" />
         {menu.map((item)=>(
         <HeaderItem name={item.name} Icon= {item.icon}/>
         ))}
+        </div>
+        <img src="" alt="" />
     </div>
   )
 }
