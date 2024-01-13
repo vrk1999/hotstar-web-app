@@ -1,25 +1,32 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import GlobalApi from './Services/GlobalApi'
-const Slider = () => {
-    const [movieList, setMovieList] = useState([]);
+import React from "react";
+import { useEffect, useState } from "react";
+import GlobalApi from "../Services/GlobalApi";
 
-    useEffect(()=>{
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+const Slider = () => {
+  const [movieList, setMovieList] = useState([]);
+
+  useEffect(() => {
     getTrendingMovies();
-    },[])
-    
-    const getTrendingMovies = ()=>{
-    
-        GlobalApi.getTrendingVideos.then(resp=>{
-          console.log(resp.data.results);
-          setMovieList(resp.data.results)
-        }) 
-    }
+  }, []);
+
+  const getTrendingMovies = () => {
+    GlobalApi.getTrendingVideos.then((resp) => {
+      console.log(resp.data.results);
+      setMovieList(resp.data.results);
+    });
+  };
   return (
     <div>
-        {movieList}
+      {movieList.map((item, index) => (
+        <img
+          src={IMAGE_BASE_URL + item.backdrop_path}
+          className="min-w-full h-[310px]"
+          alt="."
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;
