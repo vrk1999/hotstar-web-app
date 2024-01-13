@@ -17,6 +17,9 @@ const Slider = () => {
     });
   };
   return (
+    <div>
+    <HiChevronLeft/>
+    <HiChevronRight/>
     <div className="flex overflow-x-auto w-full px-16 py-4 scrollbar-none">
       {movieList.map((item, index) => (
         <img
@@ -25,6 +28,7 @@ const Slider = () => {
           alt="."
         />
       ))}
+    </div>
     </div>
   );
 };
