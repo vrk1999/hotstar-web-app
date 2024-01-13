@@ -45,7 +45,10 @@ const ProductionHouse = () => {
 
   return (
     <div>
-
+      {productionHouseList.map((item ,index)=>( <div>
+            <img src={item.image} className='w-full' />
+        </div>
+        ))}
     </div>
   )
 }
