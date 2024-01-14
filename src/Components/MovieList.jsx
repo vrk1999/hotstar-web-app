@@ -15,9 +15,9 @@ const [movieList,setMovieList] =useState([]);
       setMovieList(resp.data.results)
     });
   };
-  return <div>
+  return <div className="flex overflow-x-auto  gap-8 scrollbar-none">
     {movieList.map((item,index)=>(
-      <MovieCard/>  
+      <MovieCard movie ={ item}/>  
     ))}
   </div>;
 };
