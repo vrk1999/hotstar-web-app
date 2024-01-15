@@ -1,7 +1,7 @@
 import React from 'react'
 import GenresList from '../Constant/GenresList'
 import MovieList from './MovieList'
-
+// GenreMovieList
 function GenreMovieList() {
   return (
     <div>
