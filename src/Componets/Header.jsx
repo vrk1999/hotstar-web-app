@@ -7,6 +7,8 @@ import { HiHome,
     HiTv } from "react-icons/hi2";
 import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import HeaderItem from './HeaderItem';
+
+//header
 function Header() {
     const [toggle,setToggle]=useState(false);
     const menu=[
